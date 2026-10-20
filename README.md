@@ -28,4 +28,4 @@ Run: python chatbot.py
 Python 3, random, os, shutil, re, json
 
 ### Author
-Syed Shuja - Datheon Internship Submission
+Syed Shuja Abbas - Datheon Internship Submission
