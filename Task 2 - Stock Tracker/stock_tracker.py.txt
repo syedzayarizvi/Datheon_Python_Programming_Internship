@@ -1,0 +1,14 @@
+stock_prices = {"AAPL":180,"TSLA":250,"GOOGL":140,"MSFT":320,"AMZN":135,"INFY":15}
+portfolio={}
+print(f"Available: {', '.join(stock_prices.keys())}")
+while True:
+    s=input("Enter stock (or done): ").upper().strip()
+    if s=="DONE": break
+    if s not in stock_prices: print("Not found"); continue
+    qty=int(input(f"Qty of {s}: "))
+    portfolio[s]=portfolio.get(s,0)+qty
+total=0
+for st,q in portfolio.items():
+    val=q*stock_prices[st]; total+=val
+    print(f"{st}: {q} x {stock_prices[st]} = {val}")
+print(f"Total Investment: ${total}")
